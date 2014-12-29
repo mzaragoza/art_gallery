@@ -1,4 +1,10 @@
 GIT
+  remote: git://github.com/Circle-tech-fl/ffaker.git
+  revision: 606c037155a3aa1b604b271ea3654698669b1c56
+  specs:
+    ffaker (1.25.0)
+
+GIT
   remote: git://github.com/ctran/annotate_models.git
   revision: 038b13c04e575cc0f0c89c702c994166c7dc9955
   specs:
@@ -156,7 +162,6 @@ GEM
     factory_girl_rails (4.5.0)
       factory_girl (~> 4.5.0)
       railties (>= 3.0.0)
-    ffaker (1.25.0)
     ffi (1.9.6)
     fog (1.3.1)
       builder
@@ -266,6 +271,10 @@ GEM
       redis (~> 3.0, >= 3.0.4)
     responders (1.1.2)
       railties (>= 3.2, < 4.2)
+    rspec (2.99.0)
+      rspec-core (~> 2.99.0)
+      rspec-expectations (~> 2.99.0)
+      rspec-mocks (~> 2.99.0)
     rspec-collection_matchers (1.1.2)
       rspec-expectations (>= 2.99.0.beta1)
     rspec-core (2.99.2)
@@ -553,7 +562,7 @@ DEPENDENCIES
   email_spec
   fabrication-rails
   factory_girl_rails
-  ffaker
+  ffaker!
   fog (~> 1.3.1)
   gem-open
   geocoder
@@ -571,6 +580,7 @@ DEPENDENCIES
   railroady
   rails (= 4.1.8)
   rails_12factor
+  rspec
   rspec-rails (~> 2.0)
   rvm-capistrano
   sass-rails (~> 4.0.0)
