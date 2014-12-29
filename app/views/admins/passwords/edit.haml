@@ -1,0 +1,10 @@
+= simple_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f|
+  .bootstrap-admin-login-form
+    %h1 Change password
+    = f.error_notification
+    .form-group
+      = f.input :password, label: false, input_html: { class: 'form-control', placeholder: "Password" }
+    .form-group
+      = f.input :password_confirmation, label: false, input_html: { class: 'form-control', placeholder: "Password Confirmation" }
+    %button.btn.btn-lg.btn-primary{:type => "submit"} Submit
+

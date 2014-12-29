@@ -61,6 +61,7 @@ gem 'time_diff'
 gem "geocoder" #
 gem 'capistrano', '~> 2.15.5'
 gem 'rvm-capistrano'
+gem 'lazy_high_charts'
 
 #
 #   # Developemnt
