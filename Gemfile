@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.8'
 ruby '2.1.5'
 # Web Server
-gem 'unicorn'
+#gem 'unicorn'
 
 # Database
 gem 'pg'
