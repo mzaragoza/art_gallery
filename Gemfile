@@ -52,7 +52,6 @@ gem 'phony_rails' # validates phones
 gem 'twilio-ruby'
 gem 'ssn', '~>1.0.0'
 gem 'spinner.rb'
-gem 'avvo_api'
 gem 'sidekiq'
 gem 'sidekiq-failures'
 gem 'sidekiq-superworker'
