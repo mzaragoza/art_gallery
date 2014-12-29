@@ -1,0 +1,74 @@
+!!!
+%html
+  %head
+    %title
+      - unless yield(:title).to_s.empty?
+        = yield (:title)
+        |
+      = 'Art Gallery'
+      |
+      = 'Tag Line'
+    %meta{:content => "text/html; charset=US-ASCII", "http-equiv" => "Content-Type"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %link{:href => "/assets/css/bootstrap.min.css", :media => "screen", :rel => "stylesheet"}/
+    %link{:href => "/assets/css/bootstrap-theme.min.css", :media => "screen", :rel => "stylesheet"}/
+    %link{:href => "/assets/css/bootstrap-admin-theme.css", :media => "screen", :rel => "stylesheet"}/
+    %link{:href => "/assets/css/bootstrap-admin-theme-change-size.css", :media => "screen", :rel => "stylesheet"}/
+    %link{:href => "/assets/css/DT_bootstrap.css", :media => "screen", :rel => "stylesheet"}/
+    /[if lt IE 9]
+      <script type="text/javascript" src="/assets/js/html5shiv.js"></script>
+      <script type="text/javascript" src="/assets/js/respond.min.js"></script>
+  %body.bootstrap-admin-with-small-navbar
+    %nav.navbar.navbar-default.navbar-fixed-top.bootstrap-admin-navbar.bootstrap-admin-navbar-under-small{:role => "navigation"}
+      .container
+        .row
+          .col-lg-12
+            .navbar-header
+              %button.navbar-toggle{"data-target" => ".main-navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+                %span.sr-only Toggle navigation
+                %span.icon-bar
+                %span.icon-bar
+                %span.icon-bar
+              = link_to 'Art Gallery Admin Panel', admins_root_path, class: 'navbar-brand'
+            - if current_admin
+              .collapse.navbar-collapse.main-navbar-collapse
+                %ul.nav.navbar-nav
+                  %li.active
+                    = link_to 'Home', admins_root_path
+                  %li
+                    %a{:href => "#"} Categories
+                  %li
+                    %a{:href => "#"} Art
+                  %li
+                    %a{:href => "#"} Orders
+                  %li
+                    %a{:href => "#"} Users
+                  %li
+                    %a{:href => "#"} Admins
+    .container
+      .row
+        .col-md-12
+          .row
+            .col-lg-12
+              .page-header
+                %h1= yield (:page_title) if yield (:page_title)
+          .row
+            .col-lg-12
+              .panel.panel-default
+                = yield
+    / footer
+    .navbar.navbar-footer
+      .container
+        .row
+          .col-lg-12
+            %footer{:role => "contentinfo"}
+              %p.left Art Gallery
+              %p.right
+                \© 2013 - #{Date.today.strftime('%Y')}
+                = link_to 'Art Gallery', admins_root_path, taget: '_blank'
+    %script{:src => "http://code.jquery.com/jquery-2.0.3.min.js", :type => "text/javascript"}
+    %script{:src => "/assets/js/bootstrap.min.js", :type => "text/javascript"}
+    %script{:src => "/assets/js/twitter-bootstrap-hover-dropdown.min.js", :type => "text/javascript"}
+    %script{:src => "/assets/js/bootstrap-admin-theme-change-size.js", :type => "text/javascript"}
+    %script{:src => "/assets/vendors/datatables/js/jquery.dataTables.min.js", :type => "text/javascript"}
+    %script{:src => "/assets/js/DT_bootstrap.js", :type => "text/javascript"}
