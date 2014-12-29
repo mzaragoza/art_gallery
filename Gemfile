@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 gem 'rails', '4.1.8'
 ruby '2.1.5'
+# Web Server
+gem 'unicorn'
 
 # Database
 gem 'pg'
@@ -94,6 +96,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 #
-#   group :production do
-#   end
+group :production do
+  gem 'rails_12factor'
+end
 
