@@ -168,7 +168,7 @@ GEM
       ruby-hmac
     formatador (0.2.5)
     gem-open (0.1.7)
-    geocoder (1.2.6)
+    geocoder (1.6.3)
     gherkin (2.12.2)
       multi_json (~> 1.3)
     haml (4.0.6)
