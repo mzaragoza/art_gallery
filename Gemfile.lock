@@ -63,7 +63,8 @@ GEM
     activeuuid (0.5.0)
       activerecord (>= 3.1)
       uuidtools
-    addressable (2.3.6)
+    addressable (2.8.0)
+      public_suffix (>= 2.0.2, < 5.0)
     airbrake (4.1.0)
       builder
       multi_json
@@ -227,6 +228,7 @@ GEM
       countries (>= 0.8.2)
       phony (~> 2.8.3)
     populator (1.0.0)
+    public_suffix (3.1.1)
     rack (1.5.2)
     rack-protection (1.5.3)
       rack
